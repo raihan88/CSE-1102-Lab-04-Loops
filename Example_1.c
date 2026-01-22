@@ -1,11 +1,17 @@
-// Printing 1 to 10 using for loop
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
-    
-    for(int i = 1; i <= 10; i++){
-        printf("%d ", i);
+int main()
+{
+    int i;   // loop control variable
+
+
+
+    for(i = 1; i <= 3; i++)
+    {
+        printf("%d\n", i);
     }
 
-    return 0;
+    return 0;   // program ends here
 }
+
+
