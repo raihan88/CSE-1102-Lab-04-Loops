@@ -383,3 +383,270 @@ Write a C program to find the **sum of even numbers from 1 to 50** using a `whil
 
 Write a C program to find the **sum of odd numbers from 1 to 50** using a `while` loop.
 
+## 7. `do-while` Loop
+
+### Syntax
+
+```c
+initialization;
+
+do
+{
+    statement(s);
+    updation;
+}
+while(condition);
+```
+
+### General Flow of a `do-while` Loop
+
+Start → Initialization → Execute Statement(s) → Update Variable → Condition Check →
+If True → Execute Again → … → End
+
+
+### Example 5: Print Numbers from 1 to 5 (`do-while` Loop)
+
+**Algorithm**
+
+1. Start
+2. Set `i = 1`
+3. Print `i`
+4. Increase `i` by 1
+5. Check if `i <= 5`
+6. Repeat steps 3–5 while condition is true
+7. End
+
+
+**Program**
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i = 1;   // initialization
+
+    do
+    {
+        printf("%d ", i);   // printed at least once
+        i++;                // update
+    }
+    while(i <= 5);          // condition check
+
+    return 0;
+}
+```
+
+
+**Dry Run / Trace Table**
+
+| Iteration | i (before) | Printed | i (after) | Condition Checked |
+| --------: | ---------- | ------- | --------- | ----------------- |
+|         1 | 1          | 1       | 2         | 2 ≤ 5 (True)      |
+|         2 | 2          | 2       | 3         | 3 ≤ 5 (True)      |
+|         3 | 3          | 3       | 4         | 4 ≤ 5 (True)      |
+|         4 | 4          | 4       | 5         | 5 ≤ 5 (True)      |
+|         5 | 5          | 5       | 6         | 6 ≤ 5 (False)     |
+
+
+**Output**
+
+```
+1 2 3 4 5
+```
+
+
+### Example 6: Observe the Output Carefully
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i = 10;
+
+    do
+    {
+        printf("%d ", i);   // executes before condition check
+        i++;
+    }
+    while(i < 5);
+
+    return 0;
+}
+```
+
+**Output**
+
+```
+10
+```
+
+*(Explain the output)*
+
+
+### Task 11
+
+Write a C program using a `do-while` loop to print numbers from **5 to 10**.
+
+
+## 8. `break` Statement
+
+### Brief Theory
+
+The `break` statement is used to **immediately terminate a loop**.
+Once `break` is executed, the loop stops and control moves outside the loop.
+
+
+### Example 7: Stop the Loop When the Value is 5
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    for(i = 1; i <= 10; i++)
+    {
+        if(i == 5)
+        {
+            break;          // exits the loop when i becomes 5
+        }
+
+        printf("%d ", i);   // prints only before break is executed
+    }
+
+    return 0;
+}
+```
+
+
+### Output
+
+```
+1 2 3 4
+```
+
+
+### Example 8: Stop When the First Even Number is Found
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    for(i = 1; i <= 10; i++)
+    {
+        if(i % 2 == 0)
+        {
+            break;          // stops loop at first even number
+        }
+
+        printf("%d ", i);   // prints only odd numbers before break
+    }
+
+    return 0;
+}
+```
+
+
+### Output
+
+```
+1
+```
+
+
+### Tasks (break)
+
+1. Write a C program to print numbers from **1 to 10** but stop when the number **7** is reached.
+2. Write a C program that starts printing from **1** and stops when a number divisible by **4** is found.
+
+
+## 9. `continue` Statement
+
+### Brief Theory
+
+The `continue` statement is used to **skip the current iteration** of a loop and move directly to the next iteration.
+
+The loop does **not stop**; only the remaining statements in the current iteration are skipped.
+
+
+### Example 9: Skip Printing the Number 5
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    for(i = 1; i <= 10; i++)
+    {
+        if(i == 5)
+        {
+            continue;       // skips printing when i is 5
+        }
+
+        printf("%d ", i);   // executes for all values except 5
+    }
+
+    return 0;
+}
+```
+
+
+### Output
+
+```
+1 2 3 4 6 7 8 9 10
+```
+
+
+### Example 10: Skip Even Numbers
+
+```c
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    for(i = 1; i <= 10; i++)
+    {
+        if(i % 2 == 0)
+        {
+            continue;       // skips even numbers
+        }
+
+        printf("%d ", i);   // prints only odd numbers
+    }
+
+    return 0;
+}
+```
+
+
+### Output
+
+```
+1 3 5 7 9
+```
+
+
+### Tasks (continue)
+
+1. Write a C program to print numbers from **1 to 20**, skipping numbers divisible by **4**.
+2. Write a C program to print numbers from **1 to 15**, skipping numbers divisible by **3**.
+
+
+## 10. Practice Problems
+
+1. Print numbers from **1 to 30**, skipping multiples of **5**.
+2. Print numbers from **1 onward** and stop when the number **9** is printed.
+3. Print numbers from **20 to 1**, skipping the number **13**.
+4. Print only **odd numbers** between **1 and 40**.
+5. Find the sum of numbers from **1 to 100**, but stop adding when the sum exceeds **150**.
