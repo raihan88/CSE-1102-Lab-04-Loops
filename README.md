@@ -2,11 +2,23 @@
 
 ## Experiment: Loops in C
 
+## 1. Objectives of the Lab
 
-## 1. Purpose of the Lab
+The objective of this lab is to enable students to:
 
-This lab is designed to help beginners learn **simple loops in C programming** through **gradual and repetitive practice**. Students will solve closely related problems where each task slightly builds on earlier ones. Only **simple loops** are covered; **nested loops are not included**.
+* Apply basic C syntax to write, compile, and execute programs using simple loop constructs (`for`, `while`, and `do-while`).
+* Understand and trace the execution flow of loops through dry runs and output verification.
+* Use loop control statements such as break and continue to control program execution.
+* Develop correct programming habits by writing clear, structured, and readable C code following basic coding practices.
+ 
+### Course Outcome (CO) and Program Outcome (PO) Mapping
 
+This experiment addresses the following course outcome and its associated program outcome:
+
+- **Course Outcome (CO1):**  
+  Apply basic C syntax to write, compile, and trace simple programs using development tools.
+- **Mapped Program Outcome (PO1):**  
+  PO1 – Apply knowledge of mathematics, natural science, computing, and engineering fundamentals to solve basic engineering problems.
 
 ## 2. Prerequisites
 
